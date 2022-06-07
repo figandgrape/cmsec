@@ -1,7 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
+import ReactDOM from 'react-dom';
 import IndexPage from './App';
+import './index.css';
+import './fonts/Fashion-Fetish-Bold.ttf';
+import './fonts/Fashion-Fetish-Heavy.ttf';
+import './fonts/Fashion-Fetish-Italic.ttf';
+import './fonts/Fashion-Fetish-Light-Italic.ttf';
+import './fonts/Fashion-Fetish-Outline.ttf';
+import './fonts/Fashion-Fetish-Regular.ttf';
+import './fonts/Fashion-Fetish-Small-Caps.ttf';
 import { ChakraProvider, extendTheme, theme as base } from '@chakra-ui/react';
 
 const theme = extendTheme({
@@ -20,9 +27,9 @@ const theme = extendTheme({
     },
   },
   fonts: {
-    heading: `Montserrat, ${base.fonts?.heading}`,
-    body: `Inter, ${base.fonts?.heading}`,
-    footer: `Montserrat, ${base.fonts?.footer}`
+    heading: `Fashion-Fetish, ${base.fonts?.heading}`,
+    body: `Fashion-Fetish, ${base.fonts?.heading}`,
+    footer: `Fashion-Fetish, ${base.fonts?.footer}`
   },
   config: {
     initialColorMode: 'dark'
@@ -31,11 +38,11 @@ const theme = extendTheme({
 });
 export default theme;
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+ReactDOM.render(
   <React.StrictMode>
     <ChakraProvider theme={theme}>
       <IndexPage />
     </ChakraProvider>
-  </React.StrictMode>
+  </React.StrictMode>,
+  document.getElementById('root')
 );

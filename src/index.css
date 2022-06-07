@@ -11,3 +11,44 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face{
+  font-family: "Fashion-Fetish-Bold";
+  src: local("Fashion-Fetish-Bold"),
+  url("./fonts/Fashion-Fetish-Bold.ttf")
+}
+@font-face{
+  font-family: "Fashion-Fetish-Heavy";
+  src: local("Fashion-Fetish-Heavy"),
+  url("./fonts/Fashion-Fetish-Heavy.ttf")
+}
+@font-face{
+  font-family: "Fashion-Fetish-Italic";
+  src: local("Fashion-Fetish-Italic"),
+  url("./fonts/Fashion-Fetish-Italic.ttf")
+}
+@font-face{
+  font-family: "Fashion-Fetish-Light-Italic";
+  src: local("Fashion-Fetish-Light-Italic"),
+  url("./fonts/Fashion-Fetish-Italic.ttf")
+}
+@font-face{
+  font-family: "Fashion-Fetish-Light";
+  src: local("Fashion-Fetish-Light"),
+  url("./fonts/Fashion-Fetish-Light.ttf")
+}
+@font-face{
+  font-family: "Fashion-Fetish-Outline";
+  src: local("Fashion-Fetish-Outline"),
+  url("./fonts/Fashion-Fetish-Outline.ttf")
+}
+@font-face{
+  font-family: "Fashion-Fetish-Regular";
+  src: local("Fashion-Fetish-Regular"),
+  url("./fonts/Fashion-Fetish-Regular.ttf")
+}
+@font-face{
+  font-family: "Fashion-Fetish-Small-Caps";
+  src: local("Fashion-Fetish-Small-Caps"),
+  url("./fonts/Fashion-Fetish-Small-Caps.ttf")
+}

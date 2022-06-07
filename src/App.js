@@ -1,5 +1,6 @@
-import logo from './components/images/logo-cmsec.png';
-import underconstructionimage from './components/images/NicePng_under-construction-png_1526045.png';
+// import logo from './components/images/logo-cmsec.png';
+// import underconstructionimage from './components/images/NicePng_under-construction-png_1526045.png';
+import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 import {
   VStack,
   Link,
@@ -7,46 +8,95 @@ import {
   Text,
   Center,
   useColorModeValue,
+  Flex,
   Button,
+  StackDivider,
+  Divider,
 } from '@chakra-ui/react';
-// import './App.css';
-
-export const Render = () => {
-}
+import { Simple_ES } from './components/spa/NavBarHeader_ES.tsx';
+import './fonts/Fashion-Fetish-Bold.ttf';
+import './fonts/Fashion-Fetish-Heavy.ttf';
+import './fonts/Fashion-Fetish-Italic.ttf';
+import './fonts/Fashion-Fetish-Light-Italic.ttf';
+import './fonts/Fashion-Fetish-Outline.ttf';
+import './fonts/Fashion-Fetish-Regular.ttf';
+import './fonts/Fashion-Fetish-Small-Caps.ttf';
+import { Footer } from './components/spa/Footer.tsx';
+import './App.css';
+// import portada0 from '../src/components/images/monitoreo2.jpg'
+// import portada0 from '../src/components/images/monitoreo.jpg'
+// import CaptionCarousel from './components/spa/Carousel.tsx';
+import { FaRedRiver } from 'react-icons/fa';
+import {Landing} from './components/spa/Landing.js';
+import { Vigilancia } from "./components/spa/Vigilancia";
+import { Vulns } from "./components/spa/Vulns";
+import { Electronica } from "./components/spa/Electronica";
+import { CustodiaP } from "./components/spa/CustodiaP";
+import { CustodiaM } from "./components/spa/CustodiaM";
+import { Privacidad } from "./components/spa/Privacidad";
+import { Cookies } from "./components/spa/Cookies";
+import { Nosotros } from "./components/spa/Nosotros";
+import { Historia } from "./components/spa/Historia";
+import { Valores } from "./components/spa/Valores";
+import { Servicios } from "./components/spa/Servicios";
 
 const IndexPage = () => {
-  return (<>
-    <Center bgGradient="linear(to-r, blackAlpha.500, gray.500, whiteAlpha.700, gray.500, blackAlpha.500)" m='4'>
-      <VStack w='500px' h='500px' justify={'center'}><Image src={logo} /></VStack>
-    </Center>
-    <VStack spacing='4' py={1} bgGradient="linear(to-r, blackAlpha.500, gray.500, whiteAlpha.700, gray.500, blackAlpha.500)" m='4'>
-      <Text fontSize={'3xl'} fontStyle='oblique' textAlign={'center'} textTransform='uppercase' color={useColorModeValue('black', 'white')}
-      >Su tranquilidad es nuestra mayor preocupación</Text>
-      {/* <Text fontSize={'3xl'} fontStyle='oblique' textAlign={'center'} textTransform='uppercase' color={useColorModeValue('black', 'white')}
-      >Your safety is our most important concern </Text> */}
-    </VStack>
-    <VStack spacing='4' py={1} bgGradient="linear(to-r, orange.500, orange.700)" m='4' w={'auto'}>
-      <Text fontSize={'3xl'} fontStyle='oblique' textAlign={'center'} textTransform='uppercase' color={useColorModeValue('black', 'white')}
-      >Puede contactarnos <Button variant='link' color={useColorModeValue('orange.500', 'orange.500')} fontSize={'3xl'} as='a' href='mailto:contacto@conmatsecurity.net'>aquí</Button></Text>
-      {/* <Text fontSize={'3xl'} fontStyle='oblique' textAlign={'center'} textTransform='uppercase' color={useColorModeValue('black', 'white')}
-      >To contact us, you can do it <Button variant='link' color={useColorModeValue('orange.500', 'orange.500')} fontSize={'3xl'} as='a' href='mailto:contacto@conmatsecurity.net'>here</Button></Text> */}
-    </VStack>
-    <VStack mt={24}>
-    <Center bgGradient="linear(to-r, blackAlpha.500, gray.500, whiteAlpha.700, gray.500, blackAlpha.500)" m='4'>
-      <VStack w='auto' h='auto' justify={'center'}><Image src={underconstructionimage} /></VStack>
-    </Center>
-      <Text fontSize={'xl'} fontStyle='oblique' textAlign={'center'} textTransform='uppercase' color={useColorModeValue('black', 'white')}>Sitio en construcción</Text>
-      {/* <Text fontSize={'xl'} fontStyle='oblique' textAlign={'center'} textTransform='uppercase' color={useColorModeValue('black', 'white')}>Site is under construction</Text> */}
-    </VStack>
-    <VStack mt={12}>
-    <Text fontSize={'sm'} fontStyle='oblique' textAlign={'center'} textTransform='uppercase' color={useColorModeValue('black', 'white')} >
-          <Link href="https://figandgrape.io" textAlign={"center"}>
-          Site powered By Fig &amp; Grape<br />
-          </Link>
-          Copyright &copy; {new Date().getUTCFullYear()} 
-        </Text>
-    </VStack>
-  </>
-  );
+   return(
+  <Router>
+    <Switch>
+
+    <Route path='/' exact>
+      <Landing/>
+    </Route>
+
+    <Route path='/vigilancia' exact>
+      <Vigilancia/>
+    </Route>
+    
+    <Route path='/servicios' exact>
+      <Servicios/>
+    </Route>
+
+    <Route path='/vulns' exact>
+      <Vulns/>
+    </Route>
+
+    <Route path='/electronica' exact>
+      <Electronica/>
+    </Route>
+
+    <Route path='/custodia-p' exact>
+      <CustodiaP/>
+    </Route>
+
+    <Route path='/custodia-m' exact>
+      <CustodiaM/>
+    </Route>
+
+    <Route path='/privacidad' exact>
+      <Privacidad/>
+    </Route>
+
+    <Route path='/cookies' exact>
+      <Cookies/>
+    </Route>
+
+    <Route path='/nosotros' exact>
+      <Nosotros/>
+    </Route>
+
+    <Route path='/historia' exact>
+      <Historia/>
+    </Route>
+
+    <Route path='/valores' exact>
+      <Valores/>
+    </Route>
+
+    <Redirect to="/" />
+
+    </Switch>
+  </Router>
+  )
 }
 export default IndexPage;
