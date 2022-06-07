@@ -2,19 +2,14 @@ import {
   Box,
   Flex,
   Text,
-  Avatar,
-  HStack,
   IconButton,
-  Button,
   Menu,
   MenuButton,
   MenuList,
   MenuItem,
   MenuDivider,
   Stack,
-  useColorMode,
-  VisuallyHidden,
-  Container,
+  // useColorMode,
   Collapse,
   Icon,
   Link,
@@ -26,37 +21,17 @@ import {
   useDisclosure, Image,
   Center,
 } from "@chakra-ui/react";
-import { ReactNode } from "react";
 import {
   HamburgerIcon,
   CloseIcon,
-  MoonIcon,
-  SunIcon,
   ChevronDownIcon,
   ChevronRightIcon,
 } from "@chakra-ui/icons";
-import {
-  FaAccessibleIcon,
-  FaBitcoin,
-  FaLink,
-  FaMoneyBill,
-  FaNetworkWired,
-  FaPaperclip,
-  FaSmile,
-  FaWallet,
-} from "react-icons/fa";
 import image2 from '../images/logo-cmsec.png';
-// import './fonts/Fashion-Fetish-Bold.ttf';
-// import './fonts/Fashion-Fetish-Heavy.ttf';
-// import './fonts/Fashion-Fetish-Italic.ttf';
-// import './fonts/Fashion-Fetish-Light-Italic.ttf';
-// import './fonts/Fashion-Fetish-Outline.ttf';
-// import './fonts/Fashion-Fetish-Regular.ttf';
-// import './fonts/Fashion-Fetish-Small-Caps.ttf';
 
 export const Simple_ES = () => {
   const { isOpen, onToggle } = useDisclosure();
-  const { colorMode, toggleColorMode } = useColorMode();
+  // const { colorMode, toggleColorMode } = useColorMode();
 
   return (
     <Box >
@@ -234,13 +209,13 @@ export const Simple_ES = () => {
 };
 
 const DesktopNav = () => {
-  const linkColor = useColorModeValue("gray.200", "whiteAlpha.500");
-  const linkHoverColor = useColorModeValue("blackAlpha.900", "whiteAlpha.800");
+  // const linkColor = useColorModeValue("gray.200", "whiteAlpha.500");
+  // const linkHoverColor = useColorModeValue("blackAlpha.900", "whiteAlpha.800");
   const popoverContentBgColor = useColorModeValue("blackAlpha.900", "whiteAlpha.900");
-  const popoverContentBg2Color = useColorModeValue("blackAlpha.600", "whiteAlpha.600");
+  // const popoverContentBg2Color = useColorModeValue("blackAlpha.600", "whiteAlpha.600");
   const popoverTextBgColor = useColorModeValue("whiteAlpha.900", "blackAlpha.900");
 
-  const bgColor = useColorModeValue("blackAlpha.500", "whiteAlpha.500");
+  // const bgColor = useColorModeValue("blackAlpha.500", "whiteAlpha.500");
 
   return (
     <Stack direction={"row"} spacing={-4} >
@@ -300,7 +275,7 @@ const DesktopNav = () => {
 };
 
 const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
-  const popoverContentBgColor = useColorModeValue("blackAlpha.900", "whiteAlpha.900");
+  // const popoverContentBgColor = useColorModeValue("blackAlpha.900", "whiteAlpha.900");
   const dsubnavColor = useColorModeValue("blackAlpha.900", "whiteAlpha.900");
   return (
     <Link
@@ -528,226 +503,3 @@ const NAV_ITEMS: Array<NavItem> = [
   },
 ];
 
-
-{/* <Button
-            mr={0}
-            as="a"
-            alignSelf={'center'}
-            variant={"ghost"}
-            bgColor={"green.800"}
-            textColor={"gray.200"}
-            size={"sm"}
-            href={"/kyc-form"}
-            target="_blank"
-            _hover={{ bg: "whiteAlpha.400" }}
-          >
-            Sign Up
-          </Button>
-          <Button
-            mr={0}
-            as="a"
-            alignSelf={'center'}
-            variant={"ghost"}
-            colorScheme={"gray"}
-            bgColor={"green.800"}
-            textColor={"gray.200"}
-            size={"sm"}
-            href={"/login"}
-            target="_blank"
-            _hover={{ bg: "whiteAlpha.400" }}
-          >
-            Sign In
-          </Button> */}
-
-
-
-
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// //alphabetcapitalgroup.com/real-estate-developments/
-// const Links = ["Buy Crypto", "Buy G27 Token", "Whitepaper", "About us"];
-
-// const NavLink = ({ children }: { children: ReactNode }) => (
-//   <Link
-//     px={4}
-//     py={2}
-//     rounded={"md"}
-//     _hover={{
-//       textDecoration: "none",
-//       bg: useColorModeValue("gray.400", "gray.700"),
-//     }}
-//     href={"/login"}
-//   >
-//     {children}
-//   </Link>
-// );
-
-// export const Simple = () => {
-//   const { isOpen, onOpen, onClose } = useDisclosure();
-//   const { colorMode, toggleColorMode } = useColorMode();
-//   const bgColor = useColorModeValue("whiteAlpha.100", "whiteAlpha.400");
-
-//   return (
-//     <Box bg={"blackAlpha.900"} px={4}>
-//       <Flex
-//         textColor={"whiteAlpha.900"}
-//         alignItems={"center"}
-//         justifyContent={"space-between"}
-//         bgColor="black"
-//         zIndex={20}
-//         w="full"
-//         h={14}
-//         pos="fixed"
-//         top="0"
-//         left="0"
-//         flexDir="row"
-//         _hover={{
-//           bg: "green.500",
-//           textColor: "whiteAlpha.800",
-//           bgGradient:
-//             "linear(to-l, black, black, gray.800, green.700, gray.800, green.800, gray.800, green.800, gray.800, green.700, gray.800, black, black, black)",
-//         }}
-//       >
-//         <IconButton
-//           size={"md"}
-//           icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
-//           aria-label={"Open Menu"}
-//           display={{ md: "none" }}
-//           onClick={isOpen ? onClose : onOpen}
-//         />
-//         <Box bgColor={bgColor} textColor={"whiteAlpha.700"}>
-//           <Link target="_blank" href={"https://alphabetcapitalgroup.com"}>
-//             <img alt="logoACG" src={image2}></img>
-//           </Link>
-//         </Box>
-
-//         <HStack spacing={4} justifyContent={"center"} pr={44}>
-//           <Button
-//             as="a"
-//             variant={"ghost"}
-//             colorScheme={"gray"}
-//             size={"sm"}
-//             mr={4}
-//             href={"/buy-crypto"}
-//             target="_blank"
-//             leftIcon={<FaBitcoin />}
-//             _hover={{ bg: "whiteAlpha.400" }}
-//           >
-//             Invest in Crypto
-//           </Button>
-//           <Button
-//             as="a"
-//             variant={"ghost"}
-//             colorScheme={"gray"}
-//             size={"md"}
-//             mr={6}
-//             href={"/login"}
-//             leftIcon={<FaMoneyBill />}
-//             _hover={{ bg: "whiteAlpha.400" }}
-//           >
-//             Invest in G27
-//           </Button>
-//           <Button
-//             variant={"ghost"}
-//             colorScheme={"gray"}
-//             size={"md"}
-//             mr={6}
-//             href={"https://g27.alphabetcapitalgroup.com/about-us/"}
-//             leftIcon={<FaPaperclip />}
-//             _hover={{ bg: "whiteAlpha.400" }}
-//           >
-//             Whitepaper
-//           </Button>
-//           <Button
-//             as="a"
-//             variant={"ghost"}
-//             colorScheme={"gray"}
-//             size={"md"}
-//             mr={6}
-//             href={"/about-us"}
-//             leftIcon={<FaNetworkWired />}
-//             target="_blank"
-//             _hover={{ bg: "whiteAlpha.400" }}
-//           >
-//             About Us
-//           </Button>
-//         </HStack>
-
-//         <Flex alignItems={"center"}>
-//           <Menu>
-//             <IconButton
-//               onClick={toggleColorMode}
-//               aria-label={"ColorMode"}
-//               margin={2}
-//               bgColor={useColorModeValue("blackAlpha.700", "blackAlpha.700")}
-//               textColor={useColorModeValue("whiteAlpha.900", "whiteAlpha.900")}
-//               _hover={{ bg: useColorModeValue("green.900", "green.900") }}
-//             >
-//               {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
-//             </IconButton>
-//             <MenuButton
-//               as={Button}
-//               rounded={"full"}
-//               variant={"link"}
-//               cursor={"pointer"}
-//               minW={0}
-//             >
-//               <Avatar size={"md"} bg={"blue.400"} src={image4} />
-//             </MenuButton>
-//             <MenuList
-//               bgGradient={
-//                 "linear(to-l, black, gray.800, green.700, gray.800, black, black, black)"
-//               }
-//               bgColor={useColorModeValue("blackAlpha.700", "blackAlpha.300")}
-//             >
-//               <MenuItem
-//                 as="a"
-//                 href="kyc-form"
-//                 target={"_blank"}
-//                 _hover={{ bg: useColorModeValue("green.700", "green.700") }}
-//               >
-//                 Sign in
-//               </MenuItem>
-//               <MenuDivider />
-//               <MenuItem
-//                 as="a"
-//                 href="login"
-//                 target={"_blank"}
-//                 _hover={{ bg: useColorModeValue("green.700", "green.700") }}
-//               >
-//                 Log in
-//               </MenuItem>
-//               <MenuDivider />
-//               <MenuItem
-//                 as="a"
-//                 href="whitepaper"
-//                 target={"_blank"}
-//                 _hover={{ bg: useColorModeValue("green.700", "green.700") }}
-//               >
-//                 Whitepaper
-//               </MenuItem>
-//               <MenuDivider />
-//               <MenuItem
-//                 as="a"
-//                 href="about-us"
-//                 target={"_blank"}
-//                 _hover={{ bg: useColorModeValue("green.700", "green.700") }}
-//               >
-//                 About us
-//               </MenuItem>
-//             </MenuList>
-//           </Menu>
-//         </Flex>
-//       </Flex>
-
-//       {isOpen ? (
-//         <Box pb={4} display={{ md: "none" }}>
-//           <Stack as={"nav"} spacing={4}>
-//             {Links.map((link) => (
-//               <NavLink key={link}>{link}</NavLink>
-//             ))}
-//           </Stack>
-//         </Box>
-//       ) : null}
-//     </Box>
-//   );
-// };

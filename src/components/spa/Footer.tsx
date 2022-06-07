@@ -6,71 +6,25 @@ import {
   Stack,
   Text,
   Flex,
-  Tag,
+  // Tag,
   useColorModeValue,
   chakra,
   VisuallyHidden,
   VStack,
   HStack,
-  IconButton,
   Image,
-  Button,
-  FormControl,
-  FormLabel,
-  Heading,
-  Input,
-  InputGroup,
-  InputLeftElement,
-  Textarea,
-  Tooltip,
-  useClipboard,
-  useColorMode,
+  // useColorMode,
   Center,
-  Divider,
-} from "@chakra-ui/react";
+  } from "@chakra-ui/react";
 import {
-  FaCalendar,
-  FaCode,
-  FaCoffee,
-  FaFacebook,
-  FaHome,
   FaInstagram,
-  FaLinkedin,
-  FaMoon,
-  FaSmile,
-  FaTwitter,
-  FaYoutube,
 } from "react-icons/fa";
 
 import { ReactNode } from "react";
 import image2 from "../images/logo-cmsec.png";
-// import image3 from '../../../images/logo-g27-estirado.png';
-
-import { FaWallet } from "react-icons/fa";
-import {
-  BsGithub,
-  BsLinkedin,
-  BsMoonFill,
-  BsPerson,
-  BsSunFill,
-  BsCalendar2DateFill,
-  BsTwitter,
-  BsPersonBadge,
-  BsCalendar2Date,
-  BsCalendar2Day,
-  BsCalendar2,
-  BsCalendar2Event,
-  BsCalendar2EventFill,
-  BsCalendarXFill,
-  BsCalendarCheckFill,
-  BsSun,
-  BsMoon,
-  BsMoonStarsFill,
-} from "react-icons/bs";
-import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 
 const Logo = (props: any) => {
-  const bgColor = useColorModeValue("whiteAlpha.100", "whiteAlpha.400");
+  // const bgColor = useColorModeValue("whiteAlpha.100", "whiteAlpha.400");
   return (
     <Stack direction={["column", "row"]} spacing="-16">
       <Box
@@ -103,8 +57,8 @@ const ListHeader = ({ children }: { children: ReactNode }) => {
 };
 
 export const Footer = () => {
-  const { colorMode, toggleColorMode } = useColorMode();
-  const bgColor = useColorModeValue("whiteAlpha.100", "whiteAlpha.400");
+  // const { colorMode, toggleColorMode } = useColorMode();
+  // const bgColor = useColorModeValue("whiteAlpha.100", "whiteAlpha.400");
   const SocialButton = ({
     children,
     label,
